@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/style.scss";
+import Hero from "./components/Hero";
+import { useState } from "react";
+import { Map } from "./components/Map";
 
 function App() {
+  const [ipAddress, setIpAddress] = useState("");
+  const [results, setResults] = useState({});
+  const [position, setPosition] = useState([51.505, -0.09]);
+
+  // console.log(results);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hero
+        ipAddress={ipAddress}
+        setIpAddress={setIpAddress}
+        setResults={setResults}
+      />
+      <Map results={results} position={position} />
     </div>
   );
 }

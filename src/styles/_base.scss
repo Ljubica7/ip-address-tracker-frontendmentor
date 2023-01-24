@@ -1,0 +1,126 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Rubik", sans-serif;
+}
+
+*,
+::after,
+::before,
+body {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+  height: 100%;
+  width: 100vw;
+  font-size: calc(100vw / 1920 * 16);
+
+  @media screen and (max-width: 768px) {
+    font-size: calc(100vw / 768 * 16);
+  }
+}
+
+main {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100vw;
+}
+
+//normalize
+b,
+strong {
+  font-weight: bolder;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[hidden] {
+  display: none;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+a {
+  text-decoration: none;
+  margin: 0;
+  font-style: normal;
+}
+
+// colors
+
+$neutral-100: hsl(0, 0%, 100%);
+
+$neutral-500: hsl(0, 0%, 59%);
+
+$neutral-800: hsl(0, 0%, 17%);
+
+$neutral-900: hsl(0, 0%, 0%);
