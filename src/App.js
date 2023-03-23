@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Map } from "./components/Map";
 
 function App() {
-  const [ipAddress, setIpAddress] = useState("77.28.91.207");
+  const [ipAddress, setIpAddress] = useState("192.212.174.101");
   const [results, setResults] = useState({});
 
   return (
