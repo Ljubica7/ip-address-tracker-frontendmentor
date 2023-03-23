@@ -4,11 +4,8 @@ import { useState } from "react";
 import { Map } from "./components/Map";
 
 function App() {
-  const [ipAddress, setIpAddress] = useState("");
+  const [ipAddress, setIpAddress] = useState("77.28.91.207");
   const [results, setResults] = useState({});
-  const [position, setPosition] = useState([51.505, -0.09]);
-
-  // console.log(results);
 
   return (
     <div className="App">
@@ -16,8 +13,10 @@ function App() {
         ipAddress={ipAddress}
         setIpAddress={setIpAddress}
         setResults={setResults}
+        results={results}
       />
-      <Map results={results} position={position} />
+
+      {results && results.ip ? <Map results={results} /> : ""}
     </div>
   );
 }

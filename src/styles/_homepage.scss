@@ -30,6 +30,9 @@
     border: 1px solid transparent;
     border-radius: 12px;
     overflow: hidden;
+    @include for-tabletS {
+      width: 90vw;
+    }
     input {
       width: 100%;
       border: none;
@@ -67,15 +70,21 @@
 .results-block {
   position: absolute;
   z-index: 401;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   top: -15%;
   left: 10rem;
   right: 10rem;
-
   background: $neutral-100;
   border-radius: 18px;
   padding-block: 3rem;
+  @include for-tabletS {
+    grid-template-columns: 100%;
+    align-items: center;
+    gap: 20px;
+    left: 20px;
+    right: 20px;
+  }
 
   .block {
     padding-inline: 4rem;
@@ -83,17 +92,28 @@
     &:last-of-type {
       border: none;
     }
-
+    @include for-tabletS {
+      border: none;
+      padding-inline: 5px;
+      text-align: center;
+    }
     h2 {
       font-size: 2rem;
       font-weight: 500;
       padding-top: 20px;
       max-width: 7em;
+      @include for-tabletS {
+        max-width: 100%;
+        font-size: 22px;
+      }
     }
     p {
       font-size: 16px;
       font-weight: 700;
       color: $neutral-500;
+      @include for-tabletS {
+        font-size: 14px;
+      }
     }
   }
 }
